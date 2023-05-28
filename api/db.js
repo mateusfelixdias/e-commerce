@@ -1,6 +1,6 @@
-const faker = require('faker');
+const faker = require('faker')
 
-const TOTAL_PAGES = 5;
+const TOTAL_PAGES = 5
 
 const baseProducts = [
   {
@@ -13,8 +13,7 @@ const baseProducts = [
     category: 't-shirts',
     name: 'Camiseta not today.',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-05.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-05.jpg',
   },
   {
     category: 'mugs',
@@ -26,15 +25,13 @@ const baseProducts = [
     category: 't-shirts',
     name: 'Camiseta Broken Saints',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-03.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-03.jpg',
   },
   {
     category: 't-shirts',
     name: 'Camiseta Outcast',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-06.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-06.jpg',
   },
   {
     category: 'mugs',
@@ -46,8 +43,7 @@ const baseProducts = [
     category: 't-shirts',
     name: 'Camiseta evening',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-02.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-02.jpg',
   },
   {
     category: 'mugs',
@@ -65,8 +61,7 @@ const baseProducts = [
     category: 't-shirts',
     name: 'Camiseta DREAMER',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-01.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-01.jpg',
   },
   {
     category: 'mugs',
@@ -78,10 +73,9 @@ const baseProducts = [
     category: 't-shirts',
     name: 'Camiseta Ramones',
     description: faker.lorem.paragraph(),
-    image_url:
-      'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-04.jpg',
+    image_url: 'https://storage.googleapis.com/xesque-dev/challenge-images/camiseta-04.jpg',
   },
-];
+]
 
 const allProducts = new Array(TOTAL_PAGES).fill(1).reduce((acc) => {
   const products = baseProducts
@@ -95,9 +89,9 @@ const allProducts = new Array(TOTAL_PAGES).fill(1).reduce((acc) => {
       sales: faker.datatype.number(40),
       created_at: faker.date.past(),
     }))
-    .sort(() => 0.5 - Math.random());
+    .sort(() => 0.5 - Math.random())
 
-  return [...acc, ...products];
-}, []);
+  return [...acc, ...products]
+}, [])
 
-module.exports = { products: allProducts };
+module.exports = { products: allProducts }
