@@ -1,6 +1,26 @@
 .main {
+  width: 100%;
   display: flex;
-  min-height: 100vh;
   align-items: center;
   flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.cardProductsContainer {
+  gap: 2rem;
+  display: grid;
+  align-items: center;
+  margin: 5rem 10rem 0rem 10rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 5rem 10rem 3.75rem 0;
 }
