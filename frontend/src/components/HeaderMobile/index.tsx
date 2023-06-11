@@ -1,16 +1,18 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 import { Container } from './styles';
-import search from '../../../public/search.svg';
+import React, { useState } from 'react';
+import search from '/public/search.svg';
+import handbag from '/public/handbag.svg';
 import { BsArrowLeftShort } from 'react-icons/bs';
-import handbag from '../../../public/handbag.svg';
 
-export function HeaderMobile() {
+interface Props {
+  keyword: string;
+  onSearch: () => void;
+  onKeyword: (keyword: string) => void;
+}
+
+export default function HeaderMobile({ keyword, onSearch, onKeyword }: Props) {
   const [isShowInput, setIsShowInput] = useState(false);
-
-  const handleSearch = () => {};
 
   const handleIsShowInput = () => {
     setIsShowInput(true);
@@ -19,6 +21,9 @@ export function HeaderMobile() {
   const handleHideSearchBar = () => {
     setIsShowInput(false);
   };
+
+  const isDisabled = keyword.trim().length === 0;
+  const cursorStyle = isDisabled ? 'not-allowed' : '';
 
   return (
     <Container>
@@ -36,9 +41,17 @@ export function HeaderMobile() {
             </button>
 
             <div>
-              <input placeholder="Procurando por algo específico?" />
+              <input
+                value={keyword}
+                placeholder="Procurando por algo específico?"
+                onChange={(event) => onKeyword(event.target.value)}
+              />
 
-              <button onClick={handleSearch}>
+              <button
+                onClick={onSearch}
+                disabled={isDisabled}
+                style={{ cursor: cursorStyle }}
+              >
                 <Image src={search} alt="Lupa" title="Pesquisar" />
               </button>
             </div>

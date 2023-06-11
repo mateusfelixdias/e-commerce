@@ -2,11 +2,18 @@
 
 import Image from 'next/image';
 import { Container } from './styles';
-import search from '../../../public/search.svg';
-import handbag from '../../../public/handbag.svg';
+import search from '/public/search.svg';
+import handbag from '/public/handbag.svg';
 
-export function HeaderDesktop() {
-  const handleSearch = () => {};
+interface Props {
+  keyword: string;
+  onSearch: () => void;
+  onKeyword: (keyword: string) => void;
+}
+
+export default function HeaderDesktop({ keyword, onSearch, onKeyword }: Props) {
+  const isDisabled = !keyword.trim().length;
+  const style = { cursor: isDisabled ? 'not-allowed' : '' };
 
   return (
     <Container>
@@ -14,9 +21,18 @@ export function HeaderDesktop() {
 
       <div>
         <div>
-          <input placeholder="Procurando por algo específico?" />
+          <input
+            value={keyword}
+            placeholder="Procurando por algo específico?"
+            onChange={({ target: { value } }) => onKeyword(value)}
+          />
 
-          <button onClick={handleSearch} title="Pesquisar">
+          <button
+            style={style}
+            title="Pesquisar"
+            onClick={onSearch}
+            disabled={isDisabled}
+          >
             <Image src={search} alt="Lupa" />
           </button>
         </div>
