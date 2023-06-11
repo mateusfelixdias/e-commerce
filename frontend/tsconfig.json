@@ -12,33 +12,19 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "/frontend/src/*"
-      ]
-    },
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "forceConsistentCasingInFileNames": true
+    "plugins": [{ "name": "next" }],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "forceConsistentCasingInFileNames": true,
+    "paths": { "@/*": ["/frontend/src/*"], "/*": ["/frontend/public/*"] }
   },
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "include": [
-    "frontend/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "frontend/.next/types/**/*.ts",
-    "frontend/src/app/product",
     "api/db.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "frontend/next-env.d.ts",
+    "frontend/src/app/product",
+    "frontend/.next/types/**/*.ts"
   ]
 }
