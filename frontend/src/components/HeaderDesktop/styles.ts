@@ -5,12 +5,12 @@ export const Container = styled.div`
   height: 5rem;
   display: flex;
   align-items: center;
-  background-color: #fff;
-  justify-content: space-around;
+  background-color: var(--white);
+  justify-content: space-between;
 
   h1 {
-    color: #5d5d6d;
     font-size: 2.5rem;
+    color: var(--slate-color);
   }
 
   div {
@@ -24,13 +24,13 @@ export const Container = styled.div`
       height: 2.5rem;
       border-radius: 8px;
       align-items: center;
-      background-color: #f3f5f6;
       justify-content: space-around;
+      background-color: var(--color-white-ice);
 
       button {
         border: none;
         cursor: pointer;
-        background-color: #f3f5f6;
+        background-color: var(--color-white-ice);
       }
 
       input {
@@ -38,9 +38,9 @@ export const Container = styled.div`
         width: 70%;
         height: 100%;
         outline: none;
-        color: #737380;
         font-size: 0.875rem;
-        background-color: #f3f5f6;
+        color: var(--dark-grey);
+        background-color: var(--color-white-ice);
       }
 
       @media (max-width: 760px) {
@@ -52,7 +52,7 @@ export const Container = styled.div`
   button {
     border: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--white);
   }
 
   @media (max-width: 760px) {
