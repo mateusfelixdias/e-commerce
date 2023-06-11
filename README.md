@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-COMMERCE;
 
-## Getting Started
+## Começando.
 
-First, run the development server:
+Bem-vindo ao E-commerce! Este projeto é um site de comércio eletrônico de produtos, desenvolvido com NextJS. Nele, você encontrará camisetas e canecas. O site permite que você visualize os detalhes do produto, adicione produtos ao carrinho, navegue através da paginação de produtos e utilize filtros para encontrar exatamente o que deseja.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Funcionalidades Principais.
+
+- Paginação: Implementei a funcionalidade de paginação diretamente no aplicativo, sem a necessidade de utilizar bibliotecas externas. Isso permite que você navegue facilmente entre os produtos disponíveis.
+
+- Ordenação: É possível ordenar os produtos por preço, do maior para o menor, do menor para o maior, por novidades ou mais vendidos.
+
+- Filtros: Você pode utilizar filtros para exibir apenas camisetas, apenas canecas ou todos os produtos.
+
+- Detalhes do produto: É possível visualizar os detalhes de cada produto, como descrição e preço.
+
+- Carrinho de compras: Você pode adicionar e remover produtos do carrinho, ajustar as quantidades desejadas e visualizar um resumo do seu pedido.
+
+## 📋 Pré-requisitos
+
+Para você rodar o projeto em sua maquina local você necessita ter essas tecnologias já instaladas ou você pode instalar:
+
+- NodeJs: você pode instalar ([clicando aqui](https://nodejs.org/en/download/)).
+
+- Yarn: você pode instalar o yarn ([clicando aqui](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)).
+
+## Executando o projeto em seu ambiente de desenvolvimento
+
+Siga as etapas abaixo para executar o projeto em seu ambiente de desenvolvimento:
+
+# 1. Instale as dependências
+
+Entre no diretório "frontend", execute o seguinte comando para instalar as dependências necessárias:
+
+```
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 2. Inicialize o projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para inicializar o projeto, utilize o seguinte comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+yarn dev
+```
 
-## Learn More
+Agora você pode acessar a aplicação na sua maquina local.
 
-To learn more about Next.js, take a look at the following resources:
+## Demostração do APP:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p>- Catálogo da loja:<p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img aling="center" src="./github/catalogoDaLoja.png" alt="Catálogo da loja.">
+<br><br>
 
-## Deploy on Vercel
+<p>- Página do produto:<p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img aling="center" src="./github/paginaDoProduto.png" alt="Página do produto.">
+<br><br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>- Página do carrinho:<p>
+
+<img aling="center" src="./github/paginaDoCarrinho.png" alt="Página do carrinho.">
+<br><br>
+
+## ✒️ Autor
+
+- [Mateus](https://github.com/mateusfelixdias).
