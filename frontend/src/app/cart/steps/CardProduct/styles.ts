@@ -20,7 +20,7 @@ export const DetailsProduct = styled.div`
   width: 30rem;
   height: 100%;
   min-height: 14.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 1rem 1rem 0.21875rem 1.9375rem;
@@ -44,17 +44,17 @@ export const SelectProductsTotal = styled.select`
   outline: none;
   border: solid;
   height: 2.5rem;
-  color: #737380;
   width: 4.0625rem;
-  border-color: #a8a8b3;
   border-radius: 0.5rem;
+  color: var(--dark-grey);
   border-width: 0.0625rem;
-  background-color: #f3f5f6;
+  border-color: var(--serene-blue);
+  background-color: var(--color-white-ice);
 `;
 
 export const Trash = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: var(--white);
 `;
