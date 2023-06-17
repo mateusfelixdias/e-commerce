@@ -37,8 +37,8 @@ export default function HeaderDesktop({ keyword, onSearch, onKeyword }: Props) {
           </button>
         </div>
 
-        <button>
-          <Image src={handbag} alt="Bolsa" />
+        <button title="Notificações">
+          <Image src={handbag} alt="Notificações" />
         </button>
       </div>
     </Container>
