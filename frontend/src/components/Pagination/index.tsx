@@ -3,16 +3,16 @@
 import Button from './steps/Button';
 import { useEffect, useState } from 'react';
 import BackAndNextButton from './steps/BackAndNextButton';
-import { ButtonsContainer, Container, PoteDots } from './styles';
 import useProductsContext from '../../context/ProductsContext';
+import { ButtonsContainer, Container, PoteDots } from './styles';
 
 export default function Pagination() {
-  const { productsFiltered, products, setItemsCurrentPage } = useProductsContext();
+  const { setCurrentPage, setItemsCurrentPage } = useProductsContext();
+  const { products, currentPage, productsFiltered } = useProductsContext();
 
   const data = productsFiltered.length ? productsFiltered : products;
 
   const [items, setItems] = useState([...data]);
-  const [currentPage, setCurrentPage] = useState(1);
 
   const itemsByPage = 12;
   const LimitSampleButtons = 5;
